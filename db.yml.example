@@ -1,37 +1,47 @@
+# Sequel
 sequel-postgresql:
   orm: sequel
   adapter: postgres
   database: simple_orm_benchmark
   user: postgres
+
 sequel-mysql:
   orm: sequel
   adapter: mysql2
   host: localhost
   database: simple_orm_benchmark
   user: root
+
 sequel-sqlite:
   orm: sequel
   adapter: sqlite
   database: sq_test.sqlite3
-sequel-amalgalite:
-  orm: sequel
-  adapter: amalgalite
-  database: amal_test.sqlite3
+
+# ActiveRecord
 activerecord-postgresql:
   orm: active_record
   adapter: postgresql
   database: simple_orm_benchmark
   username: postgres
+
+activerecord-cockroachdb:
+  orm: active_record
+  adapter: cockroachdb
+  database: simple_orm_benchmark
+
 activerecord-mysql:
   orm: active_record
   adapter: mysql2
   host: localhost
   database: simple_orm_benchmark
   username: root
+
 activerecord-sqlite:
   orm: active_record
   adapter: sqlite3
   database: ar_test.sqlite3
+
+# Mongo
 mongoid-mongodb:
   orm: mongoid
   database: simple_orm_benchmark
