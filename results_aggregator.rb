@@ -30,7 +30,7 @@ INPUT_COLUMNS = {
 # }
 #
 
-Row = Struct.new(*INPUT_COLUMNS.keys)
+Row = Struct.new *INPUT_COLUMNS.keys
 
 rows         = ARGF.read.split("\n").map { |line| Row.new *line.split(",") }
 config_names = rows.map(&:config_name).uniq
@@ -53,7 +53,7 @@ benchmarks.each do |bench_name, results|
 
   cells = config_names.map do |config_name|
     if row = results[config_name]
-      "#{row.elapsed_real_time}#{"*" if fastest == config_name} (#{row.kb_of_memory_used}k)"
+      "#{row.elapsed_real_time.to_f.round(4)}#{"*" if fastest == config_name} (#{row.kb_of_memory_used}k)"
     end
   end
 
