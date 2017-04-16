@@ -1,15 +1,15 @@
 #!/usr/bin/env ruby
 
 INPUT_COLUMNS = {
-  config_name: "Name of configuration",
-  level: "Testing level",
-  bench_name: "Name of benchmark",
-  user_cpu_time: "Amount of user CPU time",
-  system_cpu_time: "Amount of system CPU time",
-  total_cpu_time: "Amount of total CPU time",
+  config_name:       "Name of configuration",
+  level:             "Testing level",
+  bench_name:        "Name of benchmark",
+  user_cpu_time:     "Amount of user CPU time",
+  system_cpu_time:   "Amount of system CPU time",
+  total_cpu_time:    "Amount of total CPU time",
   elapsed_real_time: "Amount of actual/real/wallclock time",
   kb_of_memory_used: "Difference in process memory usage from the benchmark",
-  transaction_used: "Whether a transaction was used",
+  transaction_used:  "Whether a transaction was used",
 }
 
 #
